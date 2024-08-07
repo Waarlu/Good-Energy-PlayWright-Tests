@@ -1,0 +1,60 @@
+{
+  "landingPage": {
+    "modal": "Property Address",
+    "title": "Why do you need a property address?",
+    "text": [
+      "We need to ask for your address so that we can check whether your property is in an area where we are currently installing heat pumps. We will also try to locate your property's energy performance certificate which describes your home."
+    ]
+  },
+  "floorArea": {
+    "modal": "How do I work out the total floor area",
+    "title": "How do I work out the total floor area?",
+    "text": [
+      "If you are unsure of the floor area of the property, you can look at an old Energy Performance Certificate (EPC).",
+      "If you are unsure of the floor area of the property, you might be able to check on a property website such as ",
+      "This helps improve the accuracy of our estimate.",
+      "If you don't know or can't find your floor area, you can skip this question."
+    ]
+  },
+  "houseAge": {
+    "modal": "Where can I find when the property was built",
+    "title": "Where can I find when the property was built?",
+    "text": [
+      "You may be able to find the year or date range when the property was built on your home insurance, you home buyer survey or the title deed of the property."
+    ]
+  },
+  "boilerType": {
+    "modal": "How do I know if I have a hot water cylinder",
+    "title": "Your boiler type",
+    "text": [
+      "Take a look at the boiler. You can often find the type of boiler written on the front. If not, then here are a couple of pointers:",
+      "If your boiler heats hot water when you need it, you probably don't have a hot water cylinder",
+      "If you have a large tank with a pressure gauge on the front this is likely your water hot tank"
+    ]
+  },
+  "heatingSystem": {
+    "modal": "Need help working this out",
+    "title": "Your heating type",
+    "text": [
+      "Here are a couple of pointers to work out your heating:",
+      "If it sits outside the property with a hot cylinder inside, then you have a heat pump",
+      "Electric boilers will often have their type on the front, they're also connected to a hot water cylinder",
+      "If you don't have a hot water tank you likely have storage heaters or Direct electric"
+    ]
+  },
+  "boilerUpgradeSchema": {
+    "modal": "Boiler Upgrade Scheme",
+    "title": "Boiler Upgrade Scheme",
+    "text": [
+      "You can apply for a grant of £7,500 towards the cost of your heat pump, via the Boiler Upgrade Scheme (BUS). This scheme set up by the UK government is aimed at making it more accessible to install low carbon heating. To be eligible for a BUS grant, the property where the heat pump must meet these criteria:"
+    ]
+  },
+  "moreAboutCarbonSavings": {
+    "modal": "More about carbon savings",
+    "title": "Carbon Reduction",
+    "text": [
+      "Your estimated carbon reduction is the percentage we think your heating carbon footprint could be reduced by if you changed your heating system to an air source heat pump.",
+      "It is calculated using the information you have provided and data provided by the UK Government on the carbon factor of different fuel types."
+    ]
+  }
+}

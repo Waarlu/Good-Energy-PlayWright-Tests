@@ -1,0 +1,55 @@
+name: "Heat-Pump-E2E-Tests"
+
+trigger:
+  - none
+
+schedules:
+  - cron: "0 2 * * *"
+    displayName: 2am Tests
+    always: true
+    branches:
+      include:
+        - main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+  - job: RunPlaywrightTests
+    displayName: "Run Playwright Tests"
+    steps:
+      - script: |
+          yarn install
+        displayName: "yarn install"
+      - script: |
+          npx playwright install --with-deps
+        displayName: "Install Playwright browsers"
+      - script: |
+          cd tests
+          yarn playwright test
+        displayName: "Run Playwright tests"
+
+      - task: PublishPipelineArtifact@1
+        inputs:
+          targetPath: "./test-results"
+          artifact: "test-results"
+          publishLocation: "pipeline"
+        condition: succeededOrFailed()
+
+      - task: PublishPipelineArtifact@1
+        inputs:
+          targetPath: "./playwright-report"
+          artifact: "playwright-report"
+          publishLocation: "pipeline"
+        condition: succeededOrFailed()
+
+      - task: PublishTestResults@2
+        displayName: "Publish test results"
+        inputs:
+          searchFolder: "./test-results"
+          testResultsFormat: "JUnit"
+          testResultsFiles: "e2e-junit-results.xml"
+          mergeTestResults: true
+          failTaskOnFailedTests: true
+          testRunTitle: "Join Journey E2E"
+        condition: succeededOrFailed()

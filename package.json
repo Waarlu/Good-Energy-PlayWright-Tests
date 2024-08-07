@@ -1,0 +1,26 @@
+{
+  "name": "heat-pump",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.41.0",
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "lint": "npx eslint .",
+    "pw:ui": "yarn playwright test --ui",
+    "pw:headless": "yarn playwright test",
+    "pw:report": "yarn playwright show-report",
+    "format:check": "npx prettier . --check",
+    "format:write": "npx prettier . --write"
+  },
+  "dependencies": {
+    "fast-csv": "^5.0.0"
+  }
+}
